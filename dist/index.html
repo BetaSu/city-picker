@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for dev</title>
+</head>
+<body><script type="text/javascript" src="cityPicker.js"></script></body>
+<script>
+  const cp = window.cityPicker();
+  cp({choosed: '北京'}).then(({provinceName, cityName}) => {
+    console.log([provinceName, cityName].filter(a => a).join('|'));
+  }, () => {
+    console.log('取消');
+  })
+</script>
+</html>

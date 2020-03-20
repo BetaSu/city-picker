@@ -1,0 +1,414 @@
+
+.city-picker-oh {
+  overflow: hidden;
+}
+.city-picker * {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.city-picker {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000000001;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding-top: 47px;
+  text-align: left;
+}
+.city-picker--locate .location .mark {
+  display: block;
+}
+.city-picker .header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 91px;
+  border-bottom: 1px solid #D8D8D8;
+}
+.city-picker .back {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  height: 50%;
+}
+.city-picker .back::before {
+  position: absolute;
+  left: 21px;
+  top: 17px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-right: 1px solid #222;
+  border-bottom: 1px solid #222;
+  transform: rotate(135deg);
+  transform-origin: center center;
+}
+.city-picker .back::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: 0;
+  top: 0;
+}
+.city-picker .search {
+  position: relative;
+  height: 55px;
+  padding: 1px 0;
+  box-sizing: border-box;
+  margin: 0 19px 0 52px;
+}
+.city-picker .search::before {
+  position: absolute;
+  top: 20%;
+  left: 13px;
+  content: '';
+  background: url(https://p0.ssl.qhimg.com/t01bce72dd53a7f425e.png);
+  background-size: cover;
+  width: 17px;
+  height: 17px;
+}
+
+.city-picker .search-placeholder {
+  height: 35px;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  color: #888;
+  outline: none;
+  line-height: 1em;
+  padding: 10.5px 0 10.5px 37px;
+  font-size: 14px;
+  background: #eee;
+  border-radius: 18px;
+}
+.city-picker .top-container-cur {
+  height: 33px;
+  background: #ececee;
+  box-sizing: border-box;
+  font-size:012px;
+  color:rgba(102,102,102,1);
+  line-height: 1em;
+  padding: 105px 19px;
+}
+.city-picker .location {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 19px;
+  box-sizing: border-box;
+}
+.city-picker .mark {
+  display: none;
+  width: 1px;
+  height: 16px;
+  background: url(https://p2.ssl.qhimg.com/t01cc3d3794bf4d671f.png) no-repeat;
+  background-size: contain;
+}
+.city-picker .city {
+  flex: 1;
+  color: rgba(34, 34, 34, 1);
+  margin-left: 03px;
+  font-size:015px;
+}
+.city-picker-tab {
+  height: 36px;
+  overflow: hidden;
+}
+.city-picker-tab-item.active {
+  position: relative;
+  color: #298AFD;
+}
+.city-picker-tab-item.active::after {
+  content: '';
+  border-bottom: 02px solid #298AFD;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 55px;
+}
+.city-picker-tab-item {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  font-size:014px;
+  color:rgba(34,34,34,1);
+  line-height:1em;
+  padding: 11px 0;
+  box-sizing: border-box;
+}
+.city-picker .scroll-list {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 91px);
+  top: 0;
+  margin-top: 91px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.city-picker .scroll-hot-item {
+  padding: 0 40px;
+}
+.city-picker .scroll-item {
+  padding: 0;
+}
+.city-picker .scroll-label {
+  height: 64px;
+  font-size: 24px;
+  line-height: 64px;
+  font-family: FZLTHK--GBK1-0, FZLTHK--GBK1;
+  font-weight: normal;
+  color: rgba(85, 85, 85, 1);
+  padding: 0 40px;
+  margin: 12px 0;
+  padding: 30px 0 0;
+}
+.city-picker .scroll-hot-province-label {
+  margin-top: 20px;
+}
+
+.city-picker .scroll-title {
+  background: #F7F7F7;
+  box-sizing: border-box;
+  height: 29px;
+  line-height: 1em;
+  box-sizing: border-box;
+  color: #222;
+  margin: 0;
+  padding: 8.5px 19px;
+  font-size:012px;
+}
+
+.city-picker .scroll-city-container {
+  padding: 0 0 0 19px;
+}
+.city-picker .scroll-city-container:active {
+  background: rgba(245, 245, 245, 1);
+}
+.city-picker .cityCover {
+  background: rgba(245, 245, 245, 1);
+}
+.city-picker .scroll-city {
+  display: block;
+  height: 42px;
+  margin-right: 19px;
+  line-height: 1em;
+  padding: 13px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #222;
+  position: relative;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.city-picker .navs {
+  position: fixed;
+  right: 20px;
+  top: 18%;
+  width: 03px;
+  padding-top: 1px;
+}
+.city-picker .nav {
+  font-size: 12px;
+  color:rgba(135,139,143,1);
+  line-height: 12px;
+  text-align: right;
+  padding: 0 7px 10px 0;
+  -webkit-transform: scale(.91);
+  transform: scale(.91);
+}
+.city-picker .nav[data-value="热"] {
+  padding-right: 04px;
+}
+.city-picker .navActive {
+  font-size: 13px;
+  transform: unset;
+  color: #298AFD;
+}
+.city-picker .rvm {
+  display: none;
+  position: absolute;
+  background-image: url("https://p1.ssl.qhimg.com/t015a1ff47c4081d7d1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 21px;
+  z-index: 10;
+  cursor: pointer;
+}
+.city-picker .cityActive .scroll-city {
+  color: #0079ff;
+}
+.city-picker-hot {
+  padding: 15px 0 07px;
+  background: #F7F7F7;
+}
+.city-picker-hot h3 {
+  margin-bottom: 1px;
+  font-size: 012px;
+  color:rgba(102,102,102,1);
+  line-height: 015px;
+  -webkit-transform: scale(.916);
+  transform: scale(.916);
+}
+.city-picker-hot ul {
+  margin: 0 19px;
+  overflow: hidden;
+}
+.city-picker-hot ul li:nth-child(3n), .city-picker-child:nth-child(3n) {
+  margin-right: 0;
+}
+.city-picker-hot ul li {
+  float: left;
+  width: 31%;
+  height: 34px;
+  margin: 0 11px 08px 0;
+  background:white;
+  border-radius:004px;
+  text-align: center;
+  font-size:015px;
+  padding: 9.5px 0;
+  box-sizing: border-box;
+  color:rgba(34,34,34,1);
+  line-height: 1em;
+}
+.city-picker-hot ul li.active {
+  color: #298AFD;
+}
+.scroll-item--hot .scroll-title{
+  margin: 0;
+  height: auto;
+  padding: 0;
+}
+.city-picker-search {
+  padding-top: 54px;
+}
+.city-picker-search .header {
+  height: 55px;
+  border: none;
+}
+.city-picker-search .search {
+  position: relative;
+  margin: 0 64px 0 52px;
+}
+.city-picker-search .search-placeholder {
+  color: #888;
+  width: 100%;
+}
+.city-picker-search .search-cancel {
+  position: absolute;
+  right: -45px;
+  top: 5px;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  font-size: 014px;
+  color: rgba(34,34,34,1);
+}
+.city-picker-search-list__wrapper {
+  overflow: scroll;
+  margin-top: 15px;
+  height: calc(100% - 7px);
+}
+.city-picker-search-hitword {
+  color: #298AFD;
+}
+.city-picker-search-hitparent {
+  color: #888;
+}
+.city-picker-search .scroll-city {
+  font-size: 14px;
+}
+.city-picker-search .scroll-city::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 14px;
+  background: url(https://p2.ssl.qhimg.com/t01ad89ba95da742267.png);
+  margin-right: 8px;
+  background-size: cover;
+  position: relative;
+  top: 01px;
+}
+.city-picker-search-del {
+  position: absolute;
+  cursor: pointer;
+  right: 09px;
+  top: 11px;
+  width: 17px;
+  height: 17px;
+  background: url(https://p1.ssl.qhimg.com/t0197e113199f180fde.png);
+  background-size: cover;
+}
+
+@media screen and (min-width: 800px) {
+  .city-picker {
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+  }
+}
+
+.city-picker-switch {
+  display: none;
+  position: relative;
+  float: right;
+  font-size:012px;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:017px;
+  margin-right: 34px;
+}
+.city-picker-switch.active::after {
+  transform: rotate(225deg);
+  top: 04px;
+}
+.city-picker-switch::after {
+  position: absolute;
+  right: -13px;
+  top: 03px;
+  content: "";
+  width: 05px;
+  height: 05px;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+.city-picker-children {
+  overflow: hidden;
+  margin: 05px 19px 02px 19px;
+}
+.city-picker-child {
+  float: left;
+  text-align: center;
+  width: 31%;
+  height: 34px;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 9.5px 02px;
+  margin: 0 11px 08px 0;
+  background:rgba(255,255,255,1);
+  border-radius:004px;
+  border:001px solid rgba(237,237,237,1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.city-picker--ismunicipality .city-picker-switch {
+  display: block;
+}
