@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './docs'),
     filename: 'cityPicker.js',
     libraryTarget: 'umd',
     library: 'cityPicker'
@@ -34,7 +34,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'docs'),
     compress: true,
     port: 9000
   },

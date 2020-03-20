@@ -2,7 +2,7 @@
   "name": "city-picker",
   "version": "1.0.0",
   "description": "移动端基于原生js的城市选择器",
-  "main": "/dist/cityPicker.js",
+  "main": "/docs/cityPicker.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack"
