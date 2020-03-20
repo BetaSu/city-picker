@@ -5,8 +5,16 @@
 .city-picker * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
+}
+.city-picker::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
 }
 .city-picker {
   position: fixed;

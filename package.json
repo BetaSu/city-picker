@@ -1,5 +1,5 @@
 {
-  "name": "city-picker",
+  "name": "city-picker-mob",
   "version": "1.0.0",
   "description": "移动端基于原生js的城市选择器",
   "main": "/docs/cityPicker.js",

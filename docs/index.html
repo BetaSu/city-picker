@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>city picker demo</title>
 </head>
-<body><script type="text/javascript" src="cityPicker.js"></script></body>
+<body>
+  <button id="cp">请选择城市</button>
+<script type="text/javascript" src="cityPicker.js"></script></body>
 <script>
   const cp = window.cityPicker();
-  cp({choosed: '北京'}).then(({provinceName, cityName}) => {
-    console.log([provinceName, cityName].filter(a => a).join('|'));
+  let choosed;
+  const $btn = $('#cp');
+  $btn.on('click', function () {
+    cp({choosed}).then(({provinceName, cityName}) => {
+      choosed = cityName || provinceName;
+    $('#cp').text(choosed);
   }, () => {
     console.log('取消');
   })
+  })
+  
+  
 </script>
 </html>
